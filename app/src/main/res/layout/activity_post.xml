@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#212121">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="8dp">
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/campeon"
+            android:layout_gravity="center_vertical"
+            android:contentDescription="Profile Picture"
+            android:layout_marginEnd="8dp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="¿Qué estás pensando?"
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            android:layout_gravity="center_vertical"/>
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center_vertical"
+            android:contentDescription="Add Photo Icon"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="8dp">
+
+        <Button
+            android:id="@+id/reelsButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Reel"
+            android:background="#ff0000"
+            android:textColor="#ffffff"
+            android:layout_marginEnd="4dp"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="En vivo"
+            android:background="#ff0000"
+            android:textColor="#ffffff"
+            android:layout_marginStart="4dp"/>
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Administrar publicaciones"
+        android:background="#424242"
+        android:textColor="#ffffff"/>
+</LinearLayout>

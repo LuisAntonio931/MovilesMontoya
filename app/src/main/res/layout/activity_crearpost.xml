@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#212121"
+    android:padding="16dp">
+
+    <!-- Header -->
+    <LinearLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Crear publicación"
+            android:textColor="#ffffff"
+            android:textSize="18sp"/>
+
+        <Button
+            android:id="@+id/btnPublicar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PUBLICAR"
+            android:background="@color/blue"
+            android:textColor="#ffffff"/>
+    </LinearLayout>
+
+    <!-- Profile Section -->
+    <LinearLayout
+        android:id="@+id/profileSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/headerLayout"
+        android:layout_marginTop="16dp"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/campeon"
+            android:contentDescription="Profile Picture"
+            android:layout_marginEnd="8dp"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gerardo Medina Licona"
+                android:textColor="#ffffff"
+                android:textSize="16sp"/>
+
+            <!-- Buttons Row 1 -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="4dp">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Público"
+                    android:background="@color/blue"
+                    android:textColor="#ffffff"
+                    android:layout_marginEnd="4dp"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+ Álbum"
+                    android:background="@color/blue"
+                    android:textColor="#ffffff"
+                    android:layout_marginStart="4dp"/>
+            </LinearLayout>
+
+            <!-- Buttons Row 2 -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="4dp">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Desactivado"
+                    android:background="@color/blue"
+                    android:textColor="#ffffff"
+                    android:layout_marginEnd="4dp"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Etiqueta de IA desactivada"
+                    android:background="@color/blue"
+                    android:textColor="#ffffff"
+                    android:layout_marginStart="4dp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Image Section -->
+    <ImageView
+        android:id="@+id/sampleImage"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scaleType="centerCrop"
+        android:contentDescription="Sample Image"
+        android:layout_below="@id/profileSection"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Comment Section -->
+    <TextView
+        android:id="@+id/commentSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sampleImage"
+        android:layout_marginBottom="16dp"
+        android:text="Haz un comentario sobre esta foto..."
+        android:textColor="#999999"
+        android:background="#333333"
+        android:padding="16dp"/>
+
+    <!-- Edit and Effects Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/commentSection"
+        android:layout_marginBottom="16dp"
+        android:gravity="center_vertical">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Editar"
+            android:background="#424242"
+            android:textColor="#ffffff"
+            android:layout_marginEnd="8dp"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Efectos"
+            android:background="#424242"
+            android:textColor="#ffffff"
+            android:layout_marginStart="8dp"/>
+    </LinearLayout>
+
+</RelativeLayout>

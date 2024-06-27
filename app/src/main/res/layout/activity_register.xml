@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <!-- Título "UppJobs" -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="UppJobs"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Separador -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Subtítulo "Registrar" -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Registrar"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- EditText para Usuario -->
+        <EditText
+            android:id="@+id/name_register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Usuario"
+            android:backgroundTint="@android:color/darker_gray"
+            android:textColorHint="@android:color/white"
+            android:textColor="@android:color/white"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/edittext_background"/>
+
+        <!-- EditText para Email -->
+        <EditText
+            android:id="@+id/email_register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:backgroundTint="@android:color/darker_gray"
+            android:textColorHint="@android:color/white"
+            android:textColor="@android:color/white"
+            android:inputType="textEmailAddress"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/edittext_background"/>
+
+        <!-- EditText para Contraseña -->
+        <EditText
+            android:id="@+id/password_register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Contraseña"
+            android:backgroundTint="@android:color/darker_gray"
+            android:textColorHint="@android:color/white"
+            android:textColor="@android:color/white"
+            android:inputType="textPassword"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/edittext_background"/>
+
+        <!-- EditText para Confirmar Contraseña -->
+        <EditText
+            android:id="@+id/password_confirmation_register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Confirme contraseña"
+            android:backgroundTint="@android:color/darker_gray"
+            android:textColorHint="@android:color/white"
+            android:textColor="@android:color/white"
+            android:inputType="textPassword"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/edittext_background"/>
+
+        <!-- Botón de Registrarse -->
+        <Button
+            android:id="@+id/btn_register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Registrarse"
+            android:backgroundTint="@android:color/holo_blue_dark"
+            android:textColor="@android:color/white"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Botón de Regresar a Login -->
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="REGRESAR A LOGIN"
+            android:textSize="16sp"
+            android:backgroundTint="@android:color/holo_blue_dark"
+            android:textColor="@android:color/white"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Texto "O inicia sesión con" -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="O inicia sesión con"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Botones de Facebook y Google -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <Button
+                android:id="@+id/facebook_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Facebook"
+                android:backgroundTint="@android:color/darker_gray"
+                android:textColor="@android:color/white"
+                android:paddingStart="24dp"
+                android:paddingEnd="24dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+                android:layout_marginEnd="16dp"/>
+
+            <Button
+                android:id="@+id/google_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Google"
+                android:backgroundTint="@android:color/darker_gray"
+                android:textColor="@android:color/white"
+                android:paddingStart="24dp"
+                android:paddingEnd="24dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"/>
+        </LinearLayout>
+
+        <!-- Texto "¿Tienes una cuenta? Inicia sesión" -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¿Tienes una cuenta? Inicia sesión"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"/>
+    </LinearLayout>
+</ScrollView>

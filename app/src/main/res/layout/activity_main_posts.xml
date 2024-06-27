@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/home">
+
+    <!-- Header with app name, search, and messages icons -->
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/app_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="UPP JOBS"
+            android:textSize="24sp"
+            android:textColor="@android:color/white"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/user_logo_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/profile_icon"
+            android:padding="8dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:layout_marginEnd="10dp" />
+
+        <ImageView
+            android:id="@+id/search_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/busqueda_drawable"
+            android:padding="8dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:layout_marginEnd="10dp" />
+
+        <ImageView
+            android:id="@+id/message_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_chat_24"
+            android:padding="8dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter" />
+    </LinearLayout>
+
+    <!-- Bottom Navigation Bar -->
+    <LinearLayout
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="5"
+        android:padding="8dp"
+        android:elevation="10dp"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/homeImage"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:src="@drawable/home_selected_icon"
+            android:padding="8dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter" />
+
+        <ImageView
+            android:id="@+id/plusImage"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:src="@drawable/baseline_add_24"
+            android:padding="8dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter" />
+
+        <ImageView
+            android:id="@+id/homeIcon"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:src="@drawable/profile_icon"
+            android:padding="8dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter" />
+
+        <ImageView
+            android:id="@+id/notificationImage"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:src="@drawable/notifications_icon"
+            android:padding="8dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter" />
+
+        <ImageView
+            android:id="@+id/alarm_notificate"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:src="@drawable/baseline_access_time_24"
+            android:padding="8dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter" />
+
+        <ImageView
+            android:id="@+id/profileImage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/profile_icon"
+            android:padding="8dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter" />
+    </LinearLayout>
+
+    <!-- New Post Layout -->
+    <LinearLayout
+        android:id="@+id/newLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:gravity="center_vertical"
+        android:background="@android:color/black">
+
+        <ImageView
+            android:id="@+id/iconoperfil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/profile_icon"
+            android:padding="8dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter" />
+
+        <TextView
+            android:id="@+id/share_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="¿Qué estás pensando?"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:gravity="center_vertical"
+            android:padding="8dp" />
+
+
+        <ImageView
+            android:id="@+id/home_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/home_selected_icon"
+            android:padding="8dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter" />
+    </LinearLayout>
+
+    <!-- RecyclerView for Posts -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/post_background"
+        android:padding="8dp" />
+
+</LinearLayout>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/profileBackground"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/integral"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/profileImage"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="-40dp"
+        android:background="@drawable/campeon"
+        android:src="@drawable/campeon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profileBackground" />
+
+    <TextView
+        android:id="@+id/profileName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="User"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profileImage" />
+
+    <TextView
+        android:id="@+id/profileDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="un signo de interrogación azul (／。^。)／"
+        android:textColor="#ffffff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profileName" />
+
+    <!-- Action Buttons -->
+    <Button
+        android:id="@+id/addToStoryButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="Agregar a historia"
+        android:backgroundTint="#ff0000"
+        android:textColor="#ffffff"
+        app:layout_constraintEnd_toStartOf="@id/editProfileButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profileDescription" />
+
+    <Button
+        android:id="@+id/editProfileButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="Editar perfil"
+        android:backgroundTint="#ff0000"
+        android:textColor="#ffffff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/addToStoryButton"
+        app:layout_constraintTop_toBottomOf="@id/profileDescription" />
+
+    <!-- Navigation Tabs -->
+    <LinearLayout
+        android:id="@+id/navigationTabs"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/addToStoryButton">
+
+        <Button
+            android:id="@+id/postsButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Publicaciones" />
+
+        <Button
+            android:id="@+id/photosButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Fotos" />
+
+        <Button
+            android:id="@+id/reelsButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Reels" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

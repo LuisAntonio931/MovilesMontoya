@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingHorizontal="40dp"
+    android:background="@color/black"
+    tools:context=".LoginActivity">
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="UppJobs"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:layout_gravity="center_horizontal" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+
+    <EditText
+        android:id="@+id/email_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        android:background="@drawable/edittext_background"
+        android:textColorHint="@android:color/white"
+        android:textColor="@android:color/white"
+        android:inputType="textEmailAddress"
+        android:padding="12dp"
+        android:layout_marginBottom="16dp"/>
+
+    <EditText
+        android:id="@+id/password_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Contraseña"
+        android:background="@drawable/edittext_background"
+        android:textColorHint="@android:color/white"
+        android:textColor="@android:color/white"
+        android:inputType="textPassword"
+        android:padding="12dp"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Iniciar sesión"
+        android:textSize="23sp"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:textColor="@android:color/white"
+        android:padding="12dp"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="O inicia sesión por huella"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:layout_marginBottom="16dp"/>
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="Fingerprint Icon"
+        android:src="@drawable/pin_16176892" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="¿Todavía no tienes una cuenta? Crea una ahora"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/btn_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="REGRESAR A REGISTRO"
+        android:textSize="23sp"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:textColor="@android:color/white"
+        android:padding="12dp"
+        android:layout_marginBottom="16dp" />
+
+</LinearLayout>
