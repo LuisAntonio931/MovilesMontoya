@@ -54,5 +54,65 @@
             android:name=".UsersActivity"
             android:exported="true" />
 
+        <!-- CrearActivity -->
+        <activity
+            android:name=".HomeFragment"
+            android:exported="true" />
+
+        <!-- CrearActivity -->
+        <activity
+            android:name=".NotificationsFragment"
+            android:exported="true" />
+
+        <!-- CrearActivity -->
+        <activity
+            android:name=".ProfileFragment"
+            android:exported="true" />
+
+        <!-- CrearActivity -->
+        <activity
+            android:name=".StoryDetailActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".FriendsActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".MarketPlace"
+            android:exported="true" />
+
+        <activity
+            android:name=".NotificationsActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".SettingsActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".Activity_Recuperar"
+            android:exported="true" />
+
+        <activity
+            android:name=".EditPostActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".CrearPostActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".ResetPasswordActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".VerifyResetCodeActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".Activity_editar"
+            android:exported="true" />
+
     </application>
 </manifest>

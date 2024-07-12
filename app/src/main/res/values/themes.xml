@@ -7,4 +7,11 @@
         <item name="colorAccent">@color/teal_700</item>
         <!-- Other attributes -->
     </style>
+
+    <style name="ErrorMessage">
+        <item name="android:textColor">#FF0000</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:paddingTop">5dp</item>
+    </style>
+
 </resources>

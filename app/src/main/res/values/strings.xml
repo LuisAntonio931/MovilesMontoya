@@ -1,3 +1,16 @@
 <resources>
-    <string name="app_name">upp_jobs</string>
+    <string name="app_name">UPP JOBS</string>
+    <string name="back">Back</string>
+    <string name="settings_title">Settings</string>
+    <string name="profile">Profile</string>
+    <string name="notifications">Notifications</string>
+    <string name="security_and_login">Security and Login</string>
+    <string name="privacy">Privacy</string>
+    <string name="activity_status">Activity Status</string>
+    <string name="your_information">Your Information</string>
+    <string name="accessibility">Accessibility</string>
+    <string name="data_saver">Data Saver</string>
+    <string name="storage">Storage</string>
+    <string name="language">Language</string>
+    <string name="notifications_settings">Notifications Settings</string>
 </resources>

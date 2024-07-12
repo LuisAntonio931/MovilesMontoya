@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#16191C">
+
+    <!-- Toolbar or Header -->
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Editar perfil"
+        android:textColor="#ffff"
+        android:textSize="18sp"
+        />
+
+    <!-- Profile Picture Section -->
+    <LinearLayout
+        android:id="@+id/profilePictureSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header"
+        android:orientation="vertical"
+        android:layout_marginTop="1dp"
+        android:gravity="center_horizontal">
+
+        <ImageView
+            android:id="@+id/profilePicture"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/campeon"
+            android:contentDescription="Profile Picture"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:background="@drawable/campeon"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/texto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Editar"
+            android:background="@drawable/edit_text_border_rec"
+            android:textColor="#ffff"
+            android:layout_gravity="center"
+            android:width="100dp"
+            android:textAlignment="center"
+            android:textSize="15dp"
+            />
+    </LinearLayout>
+
+    <!-- Avatar Section -->
+    <LinearLayout
+        android:id="@+id/avatarSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profilePictureSection"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="16dp"
+        android:background="@drawable/edit_text_border_rec"
+        android:layout_marginTop="5dp"
+
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Avatar"
+            android:textColor="#ffff"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Convierte tu foto en un avatar"
+            android:textColor="#555555"
+            android:layout_marginBottom="16dp" />
+
+        <LinearLayout
+            android:id="@+id/avatar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/edit_text_border_rec"
+            android:gravity="center_horizontal">
+
+            <ImageView
+                android:id="@+id/avatarExample1"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/edit_text_border"
+                android:contentDescription="Avatar Example 1"
+                android:layout_marginEnd="8dp" />
+
+            <ImageView
+                android:id="@+id/avatarExample2"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/edit_text_border_rec"
+                android:contentDescription="Avatar Example 2"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/usePhotoButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Usar foto"
+            android:background="@drawable/custom_edit_button"
+            android:textColor="#fff"
+            android:textSize="15dp"
+            android:layout_below="@id/avatar"
+            android:layout_marginTop="5dp"
+            android:width="200dp"
+            />
+
+        <Button
+            android:id="@+id/createFromSelfieButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Crear desde selfie"
+            android:background="@drawable/custom_edit_button"
+            android:textColor="#fff"
+            android:textSize="15dp"
+            android:layout_below="@id/usePhotoButton"
+            android:layout_marginTop="5dp"
+            android:width="200dp" />
+    </LinearLayout>
+
+    <!-- Cover Photo Section -->
+    <LinearLayout
+        android:id="@+id/coverPhotoSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/avatarSection"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Foto de portada"
+            android:textColor="#ffff"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp" />
+
+        <ImageView
+            android:id="@+id/coverPhoto"
+            android:layout_width="wrap_content"
+            android:layout_height="146dp"
+            android:background="@drawable/edit_text_border_rec"
+            android:contentDescription="Cover Photo"
+            android:src="@drawable/campeon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:width="100dp"
+            android:background="@drawable/edit_text_border_rec"
+            android:text="Editar"
+            android:textColor="#fff"
+            android:textSize="12dp"
+            android:textAlignment="center"
+            android:layout_below="@id/coverPhoto"
+            android:layout_marginTop="10dp"
+            />
+    </LinearLayout>
+</RelativeLayout>

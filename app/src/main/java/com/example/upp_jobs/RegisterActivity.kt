@@ -5,12 +5,14 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.android.volley.Request
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.Volley
 import com.google.android.material.snackbar.Snackbar
 import org.json.JSONObject
+import android.util.Patterns
 
 class RegisterActivity : AppCompatActivity() {
 
@@ -18,18 +20,26 @@ class RegisterActivity : AppCompatActivity() {
     private lateinit var txtEmail: EditText
     private lateinit var txtPassword: EditText
     private lateinit var txtConfirmPassword: EditText
+    private lateinit var usernameError: TextView
+    private lateinit var emailError: TextView
+    private lateinit var passwordError: TextView
+    private lateinit var confirmPasswordError: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
 
-        txtNombre = findViewById(R.id.name_register)
-        txtEmail = findViewById(R.id.email_register)
-        txtPassword = findViewById(R.id.password_register)
-        txtConfirmPassword = findViewById(R.id.password_confirmation_register)
+        txtNombre = findViewById(R.id.username)
+        txtEmail = findViewById(R.id.email)
+        txtPassword = findViewById(R.id.password)
+        txtConfirmPassword = findViewById(R.id.confirm_password)
+        usernameError = findViewById(R.id.username_error)
+        emailError = findViewById(R.id.email_error)
+        passwordError = findViewById(R.id.password_error)
+        confirmPasswordError = findViewById(R.id.confirm_password_error)
 
-        val btnRegister = findViewById<Button>(R.id.btn_register)
-        val btnBack = findViewById<Button>(R.id.btn_back)
+        val btnRegister = findViewById<Button>(R.id.register_button)
+        val btnBack = findViewById<TextView>(R.id.have_account_text1)
 
         btnRegister.setOnClickListener {
             clickBtnRegister(it)
@@ -48,15 +58,50 @@ class RegisterActivity : AppCompatActivity() {
         val pass = txtPassword.text.toString().trim()
         val passAgain = txtConfirmPassword.text.toString().trim()
 
-        if (name.isEmpty() || email.isEmpty() || pass.isEmpty() || passAgain.isEmpty()) {
-            Snackbar.make(view, "Por favor, completa todos los campos", Snackbar.LENGTH_LONG).show()
-            return
-        } else if (pass != passAgain) {
-            Snackbar.make(view, "Lo sentimos, las contraseñas no coinciden", Snackbar.LENGTH_LONG).show()
+        var isValid = true
+
+        if (name.isEmpty()) {
+            usernameError.text = "Nombre de usuario requerido"
+            txtNombre.setBackgroundResource(R.drawable.edit_text_border_error)
+            isValid = false
+        } else {
+            usernameError.text = ""
+            txtNombre.setBackgroundResource(R.drawable.custom_edit_text)
+        }
+
+        if (email.isEmpty() || !Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+            emailError.text = "Correo electrónico no válido"
+            txtEmail.setBackgroundResource(R.drawable.edit_text_border_error)
+            isValid = false
+        } else {
+            emailError.text = ""
+            txtEmail.setBackgroundResource(R.drawable.custom_edit_text)
+        }
+
+        if (pass.isEmpty()) {
+            passwordError.text = "Contraseña requerida"
+            txtPassword.setBackgroundResource(R.drawable.edit_text_border_error)
+            isValid = false
+        } else {
+            passwordError.text = ""
+            txtPassword.setBackgroundResource(R.drawable.custom_edit_text)
+        }
+
+        if (passAgain.isEmpty() || pass != passAgain) {
+            confirmPasswordError.text = "Las contraseñas no coinciden"
+            txtConfirmPassword.setBackgroundResource(R.drawable.edit_text_border_error)
+            isValid = false
+        } else {
+            confirmPasswordError.text = ""
+            txtConfirmPassword.setBackgroundResource(R.drawable.custom_edit_text)
+        }
+
+        if (!isValid) {
+            Snackbar.make(view, "Por favor, corrige los errores en el formulario", Snackbar.LENGTH_LONG).show()
             return
         }
 
-        val url = "http://192.168.84.170:8000/api/users"
+        val url = "http://192.168.0.8:8000/api/users"
         val body = JSONObject().apply {
             val attributes = JSONObject().apply {
                 put("name", name)
@@ -74,7 +119,7 @@ class RegisterActivity : AppCompatActivity() {
                 // Manejar la respuesta exitosa del servidor
                 Snackbar.make(view, "Felicidades, usuario agregado exitosamente", Snackbar.LENGTH_LONG).show()
                 // Volver a la pantalla de inicio de sesión después de un registro exitoso
-                startActivity(Intent(this, LoginActivity::class.java))
+                startActivity(Intent(this, MainActivity::class.java))
                 finish() // Finaliza esta actividad para que no quede en el back stack
             },
             { error ->

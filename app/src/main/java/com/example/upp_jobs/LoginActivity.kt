@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.android.volley.Request
@@ -21,11 +22,13 @@ class LoginActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         // Obtener referencias a los elementos de la interfaz de usuario
-        txtEmail = findViewById(R.id.email_login)
+        txtEmail = findViewById(R.id.email)
         txtName = findViewById(R.id.password_login) // Campo de nombre
 
         val btnLogin = findViewById<Button>(R.id.btn_login)
-        val btnRegister = findViewById<Button>(R.id.btn_back)
+        val btnRegister = findViewById<TextView>(R.id.create_account_text)
+        val btnRecu = findViewById<TextView>(R.id.btn_back)
+
 
         // Manejar clic en botón de Login
         btnLogin.setOnClickListener {
@@ -43,10 +46,14 @@ class LoginActivity : AppCompatActivity() {
         btnRegister.setOnClickListener {
             startActivity(Intent(this, RegisterActivity::class.java))
         }
+
+        btnRecu.setOnClickListener {
+            startActivity(Intent(this, Activity_Recuperar::class.java))
+        }
     }
 
     private fun loginUser(email: String, name: String) {
-        val url = "http://192.168.84.170:8000/api/users?email=$email&name=$name"
+        val url = "http://192.168.0.8:8000/api/users?email=$email&name=$name"
 
         val request = JsonObjectRequest(
             Request.Method.GET, url, null,

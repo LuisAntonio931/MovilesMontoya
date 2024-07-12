@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "779841556563",
+    "project_id": "proyectoautenticacion-bbea9",
+    "storage_bucket": "proyectoautenticacion-bbea9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:779841556563:android:d6e1f231a3dfc55b3276a6",
+        "android_client_info": {
+          "package_name": "com.example.upp_jobs"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDJWyTEoGLYXUJIFCOQ5B_h6urapydpwgc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

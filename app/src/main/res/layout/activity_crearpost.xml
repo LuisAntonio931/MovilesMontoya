@@ -27,7 +27,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="PUBLICAR"
-            android:background="@color/blue"
+            android:background="@drawable/custom_edit_button"
             android:textColor="#ffffff"/>
     </LinearLayout>
 
@@ -49,9 +49,8 @@
             android:layout_marginEnd="8dp"/>
 
         <LinearLayout
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:orientation="vertical">
 
             <TextView
@@ -72,17 +71,21 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Público"
-                    android:background="@color/blue"
+                    android:background="@drawable/custom_button"
                     android:textColor="#ffffff"
-                    android:layout_marginEnd="4dp"/>
+                    android:layout_marginEnd="4dp"
+                    android:width="160dp"/>
 
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="+ Álbum"
-                    android:background="@color/blue"
+                    android:background="@drawable/custom_button"
                     android:textColor="#ffffff"
-                    android:layout_marginStart="4dp"/>
+                    android:layout_marginStart="4dp"
+                    android:width="160dp"/>
+
+
             </LinearLayout>
 
             <!-- Buttons Row 2 -->
@@ -95,18 +98,21 @@
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Desactivado"
-                    android:background="@color/blue"
-                    android:textColor="#ffffff"
-                    android:layout_marginEnd="4dp"/>
-
+                    android:layout_marginEnd="4dp"
+                    android:width="160dp"
+                    android:background="@drawable/custom_button"
+                    android:text="Etiqueta de IA desactivada"
+                    android:textSize="10dp"
+                    android:textColor="#ffffff" />
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Etiqueta de IA desactivada"
-                    android:background="@color/blue"
+                    android:text="Desactivado"
+                    android:background="@drawable/custom_button"
                     android:textColor="#ffffff"
-                    android:layout_marginStart="4dp"/>
+                    android:layout_marginStart="4dp"
+                    android:width="160dp"/>
+
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
@@ -132,7 +138,7 @@
         android:layout_marginBottom="16dp"
         android:text="Haz un comentario sobre esta foto..."
         android:textColor="#999999"
-        android:background="#333333"
+        android:background="@drawable/history"
         android:padding="16dp"/>
 
     <!-- Edit and Effects Buttons -->
@@ -149,16 +155,16 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Editar"
-            android:background="#424242"
+            android:background="@drawable/redondeo"
             android:textColor="#ffffff"
             android:layout_marginEnd="8dp"/>
 
         <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:background="@drawable/redondeo"
             android:layout_weight="1"
             android:text="Efectos"
-            android:background="#424242"
             android:textColor="#ffffff"
             android:layout_marginStart="8dp"/>
     </LinearLayout>

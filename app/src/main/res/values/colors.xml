@@ -10,5 +10,25 @@
     <color name="home">#181818</color>
     <color name="post_background">#FFFFFF</color>
     <color name="blue">#2196F3</color>
+    <color name="dark_background">#1A1A1A</color>
+    <color name="grey">#999999</color>
+    <!-- Colores principales -->
+    <color name="colorPrimary">#3969FC</color> <!-- Azul usado en el botón de iniciar sesión -->
+    <color name="colorPrimaryDark">#3B5998</color> <!-- Azul oscuro (opcional) -->
+    <color name="colorAccent">#4A90E2</color> <!-- Color de acento (puede ser el mismo que colorPrimary) -->
+
+    <!-- Colores de texto -->
+    <color name="textColorPrimary">#ffffff</color> <!-- Blanco -->
+    <color name="textColorSecondary">#aaa</color> <!-- Gris claro -->
+
+    <!-- Colores de fondo -->
+    <color name="backgroundColor">#16191C</color> <!-- Fondo negro oscuro usado en toda la pantalla -->
+    <color name="editTextBackground">#222222</color> <!-- Fondo gris oscuro usado en los EditText -->
+    <color name="editTextBorder">#444444</color> <!-- Color del borde de los EditText -->
+
+    <color name="primaryColor">#3F51B5</color>
+    <color name="sea">#42A5F5</color>
+    <color name="errorColor">#FF4081</color>
+    <color name="rojo">#FF1100</color>
 
 </resources>

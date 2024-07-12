@@ -13,7 +13,7 @@ class PostActivity : AppCompatActivity() {
 
         val shareText = findViewById<TextView>(R.id.reelsButton)
         shareText.setOnClickListener {
-            val intent = Intent(this, CrearActivity::class.java)
+            val intent = Intent(this, CrearPostActivity::class.java)
             startActivity(intent)
         }
     }

@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/home">
 
-    <!-- Header with app name, search, and messages icons -->
+    <!-- Header -->
     <LinearLayout
         android:id="@+id/header"
         android:layout_width="match_parent"
@@ -23,6 +24,7 @@
             android:textColor="@android:color/white"
             android:layout_weight="1" />
 
+        <!-- Agregar tus iconos de búsqueda y mensajes aquí -->
         <ImageView
             android:id="@+id/user_logo_left"
             android:layout_width="wrap_content"
@@ -64,6 +66,7 @@
         android:elevation="10dp"
         android:gravity="center_vertical">
 
+        <!-- Agregar tus íconos de navegación aquí -->
         <ImageView
             android:id="@+id/homeImage"
             android:layout_width="0dp"
@@ -135,6 +138,7 @@
         android:gravity="center_vertical"
         android:background="@android:color/black">
 
+        <!-- Botón de nuevo post y texto "¿Qué estás pensando?" -->
         <ImageView
             android:id="@+id/iconoperfil"
             android:layout_width="wrap_content"
@@ -155,9 +159,8 @@
             android:gravity="center_vertical"
             android:padding="8dp" />
 
-
         <ImageView
-            android:id="@+id/home_icon"
+            android:id="@+id/home_iconregister"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/home_selected_icon"
@@ -166,7 +169,16 @@
             android:scaleType="fitCenter" />
     </LinearLayout>
 
-    <!-- RecyclerView for Posts -->
+    <!-- Category Spinner -->
+    <Spinner
+        android:id="@+id/categorySpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:background="@android:color/white"
+        android:textColor="@android:color/white" />
+
+    <!-- RecyclerView para los Posts -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
@@ -174,5 +186,20 @@
         android:layout_weight="1"
         android:background="@color/post_background"
         android:padding="8dp" />
+
+    <!-- Contenedor de Fragmentos -->
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- Bottom Navigation Bar -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:menu="@menu/bottom_navigation_menu" />
 
 </LinearLayout>

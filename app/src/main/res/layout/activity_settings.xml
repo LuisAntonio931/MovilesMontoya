@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/dark_background">
+
+    <!-- Toolbar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@color/black">
+
+        <!-- Back button -->
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back_arrow"
+            android:contentDescription="@string/back"
+            android:padding="8dp"
+            android:layout_marginStart="16dp" />
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/settings_title"
+            android:textSize="20sp"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:padding="8dp" />
+
+    </LinearLayout>
+
+    <!-- Settings items -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Profile -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/profile"
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:paddingVertical="12dp"/>
+
+        <!-- Notifications -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/notifications"
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:paddingVertical="12dp"/>
+
+        <!-- Security and Login -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/security_and_login"
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:paddingVertical="12dp"/>
+
+        <!-- Privacy -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/privacy"
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:paddingVertical="12dp"/>
+
+        <!-- Activity Status -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/activity_status"
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:paddingVertical="12dp"/>
+
+        <!-- Your Information -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/your_information"
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:paddingVertical="12dp"/>
+
+        <!-- Accessibility -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/accessibility"
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:paddingVertical="12dp"/>
+
+        <!-- Data Saver -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/data_saver"
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:paddingVertical="12dp"/>
+
+        <!-- Storage -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/storage"
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:paddingVertical="12dp"/>
+
+        <!-- Language -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/language"
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:paddingVertical="12dp"/>
+
+        <!-- Notifications Settings -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/notifications_settings"
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:paddingVertical="12dp"/>
+
+    </LinearLayout>
+</LinearLayout>
